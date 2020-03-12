@@ -7,9 +7,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn compile test package'
                 sh 'ls'
                 sh 'pwd'
+                sh 'mvn compile test package'
+                
                 
             }
         }
