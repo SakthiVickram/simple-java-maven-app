@@ -7,9 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls'
-                sh 'pwd'
-                sh 'mvn compile test package'
+           
+                bat 'mvn compile test package'
                 
                 
             }
