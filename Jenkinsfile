@@ -19,10 +19,11 @@ pipeline {
             }
         }
         stage('SonarQube analysis') {
-
+         steps{
         withSonarQubeEnv(credentialsId: 'sonarqube_token', installationName: 'sonarscan') { // You can override the credential to be used
       //sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
       bat 'mvn sonar:sonar '
+        }
     }
   }
        
