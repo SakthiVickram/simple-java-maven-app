@@ -22,7 +22,7 @@ pipeline {
          steps{
         withSonarQubeEnv(credentialsId: 'sonarqube_token',installationName:'sonarqube') { // You can override the credential to be used
       //sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
-      bat 'mvn sonar:sonar '
+      bat 'mvn sonar:sonar -Dsonar.projectKey=jenkins2'
         }
     }
   }
