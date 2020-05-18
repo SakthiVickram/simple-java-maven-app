@@ -25,7 +25,7 @@ pipeline {
       //bat 'mvn sonar:sonar -Dsonar.projectKey=jenkins2'
        // }
     //}
-  }
+  }//
        
      
     }
