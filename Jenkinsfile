@@ -9,14 +9,14 @@ pipeline {
             steps {
            
                 bat 'mvn compile test package'
-                
+                junit 'allowEmptyResults: true,target/test-surefire-reports/**/*.xml' 
                 
             }
-             post {
-                always {
-                    junit 'allowEmptyResults: true,target/test-surefire-reports/**/*.xml' 
-                }
-           }
+             //post {
+                //always {
+                  //  junit 'allowEmptyResults: true,target/test-surefire-reports/**/*.xml' 
+                //}
+           //}
         }
        // stage('SonarQube analysis') {
          //steps{
