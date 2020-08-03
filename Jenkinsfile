@@ -9,7 +9,7 @@ pipeline {
             steps {
            
                 bat 'mvn compile test package'
-                junit 'allowEmptyResults: true,target/test-surefire-reports/**/*.xml' 
+                junit allowEmptyResults: true, testResults: 'target/test-surefire-reports/**/*.xml'
                 
             }
              //post {
